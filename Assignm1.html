@@ -1,0 +1,30 @@
+<html>
+    <head></head>
+    <body>
+        <h1 align="center">Working With JQuery</h1>
+        <hr/>
+        <label>Product Name : </label>
+        <input type="textbox" id="t1" placeholder="Input Product Name">
+        <br/><br/>
+        <label>Unit Price : </label>
+        <input type="textbox" id="t2" placeholder="Input Product Price">
+        <br/><br/>
+        <label>Quantity : </label>
+        <input type="textbox" id="t3" placeholder="Input Product Quantity">
+        <br/><br/>
+        <label>Total Price : </label>
+        <input type="textbox" id="t4">
+        <br/><br/>
+        <input type="button" id="b1" value="Get Total Price" onclick="sum()">
+        <script>
+            function sum()
+            {
+                let x=$("#t2").val();
+                let y=$("#t3").val();
+                let z=parseInt(x)*parseInt(y);
+                $("#t4").val(z);
+            }
+        </script>
+        <script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    </body>
+</html>

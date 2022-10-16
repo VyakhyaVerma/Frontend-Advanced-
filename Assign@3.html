@@ -1,0 +1,58 @@
+<html>
+    <head></head>
+    <body>
+        <h1 align="center">Form Validations</h1>
+        <hr/>
+        <form action="validate.jpg" method="post" id="f1" onsubmit="subb()">
+            <fieldset>
+            <span>Customer Name : </span>
+            <input type="text" id="tt1" name="text1">
+            <br/><br/>
+            <span>Source Station : </span>
+            <input type="text" id="tt2" name="ss2">
+            <br/><br/>
+            <span>Destination  Station : </span>
+            <input type="text" id="tt3" name="ss3">
+            <br/><br/>
+            <span>Contact Number : </span>
+            <input type="number" id="tt4" name="ss4">
+            <br/><br/>
+            <span id="ss22"></span>
+            <br/><br/>
+            <input type="submit" value="Login">
+        </fieldset>
+        </form>
+        <script>
+            function subb()
+            {
+                var obj1=document.getElementById("tt1");
+                var obj2=document.getElementById("tt2");
+                var obj3=document.getElementById("tt3");
+                var obj4=document.getElementById("tt4");
+                if(obj1.value=="") 
+                {
+                    event.preventDefault();
+                    document.getElementById("ss22").innerHTML="Customer Name Required!";
+                    return;
+                }
+                if(obj2.value==obj3.value)
+                {
+                    event.preventDefault();
+                    document.getElementById("ss22").innerHTML="Source and Destination cannot be Same";
+                    return;
+                }
+                if(obj4.value.length!=10)
+                {
+                    event.preventDefault();
+                    document.getElementById("ss22").innerHTML=" Valid Phone Number Required!";
+                    return;
+                }
+                else
+                {
+                    alert("The Form is submitted!");
+                    document.getElementById("ss22").innerHTML="";
+                }
+            }
+        </script>
+    </body>
+</html>

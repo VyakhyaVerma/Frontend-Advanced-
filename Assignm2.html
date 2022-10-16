@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <style>
+            .c1
+            {
+                text-align: end;
+                background-color: lightgray;
+                color: black;
+            }
+            .c2
+            {
+                text-align: center;
+                background-color: black;
+                color: white;
+            }
+            .c3
+            {
+                text-align: center;
+                background-color: slategrey;
+                color: white;
+            }
+            .b1
+            {
+                text-align: center;
+                background-color: black;
+                color: white;
+            }
+            .b2
+            {
+                text-align: center;
+                background-color: slategrey;
+                color: white;
+                border:slategrey;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">Virtual Calculator</h1>
+        <hr/>
+        <table border="2" height="500" width="500" align="center">
+            <tr>
+                <td colspan="4" class="c1" height="100"><input type="text" id="t1"></td>
+            </tr>
+            <tr>
+                <td class="c2"><input type="button" value="1" class="b1"></td>
+                <td class="c2"><input type="button" value="2" class="b1"></td>
+                <td class="c2"><input type="button" value="3" class="b1"></td>
+                <td class="c2"><input type="button" value="0" class="b1"></td>
+            </tr>
+            <tr>
+                <td class="c2"><input type="button" value="4" class="b1"></td>
+                <td class="c2"><input type="button" value="5" class="b1"></td>
+                <td class="c2"><input type="button" value="6" class="b1"></td>
+                <td class="c3"><input type="button" value="Cl" class="b2" id="bb2"></td>
+            </tr>
+            <tr>
+                <td class="c2"><input type="button" value="7" class="b1"></td>
+                <td class="c2"><input type="button" value="8" class="b1"></td>
+                <td class="c2"><input type="button" value="9" class="b1"></td>
+                <td class="c3"><input type="button" value="=" class="equal" id="bb1"></td>
+            </tr>
+            <tr>
+                <td class="c3"><input type="button" value="+" class="b2"></td>
+                <td class="c3"><input type="button" value="-" class="b2"></td>
+                <td class="c3"><input type="button" value="x" class="b2"></td>
+                <td class="c3"><input type="button" value="/" class="b2"></td>
+            </tr>
+        </table>
+        <script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+            <script>
+                
+                var x;
+                var y;
+                var s=0;
+                $(document).ready(function()
+                {
+                    var x;
+                    var z;
+                    var y=0;
+                    $(".b1").click(function() 
+                    {
+                        var inputVal = $(this).val();
+                        //alert(inputVal);
+                        $("#t1").val($("#t1").val()+inputVal);
+                    });
+
+                    $(".b2").click(function()  
+                    {
+                        var inputVal = $(this).val();
+                        //alert(inputVal);
+                        $("#t1").val($("#t1").val()+inputVal);
+                        });
+
+
+                        $("#bb1").click(function()
+                        {
+                           // alert("12");
+                        var x = $("#t1").val();
+                        $("#t1").val(eval(x));
+                        });
+
+
+                        $("#bb2").click(function()
+                        {
+                        $("#t1").val("");
+                        });
+                    });
+            </script>
+    </body>
+</html>

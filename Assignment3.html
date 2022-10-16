@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+        <h1 align="center">Working With Async</h1>
+        <hr/>
+        <input type="textbox" id="tb1" placeholder="Enter Employee Number">
+        <input type="button" value="Get Data" onclick="fetching()">
+        <script>
+            var obj=document.getElementById("tb1");
+            async function  fetching()
+			{
+                try
+                {
+                    let url="https://dummy.restapiexample.com/api/v1/employee/" + obj.value;
+                    let response=await fetch(url);
+                    let result=await response.json();
+                    console.log(result);
+                }
+                catch(error)
+                {
+                    console.log(error);
+                    fetching();
+                }
+            }
+        </script>
+    </body>
+</html>

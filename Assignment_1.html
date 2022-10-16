@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <style>
+            .c1
+            {
+                font-weight: bold;
+            }
+            .c2
+            {
+                text-decoration: underline;
+            }
+            .c3
+            {
+                font-style: italic;
+            }
+            .c4
+            {
+                background-color: blue;
+                color: white;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 align="center">Styles in CSS</h1>
+        <hr/>
+        <input type="button" value="Bold"  id="b1"/>
+        <input type="button" value="Underline"  id="b2"/>
+        <input type="button" value="Italic"  id="b3"/>
+        <br/<<br/>
+        <p id="p1" style="border:2px solid blue;border-radius: 5px; padding:10px;">This section contains details about jQuery. This section contains details about jQuery. This section contains details about jQuery. This section contains details about jQuery. This section contains details about jQuery. This section contains details about jQuery. This section contains details about jQuery. This section contains details about jQuery. This section contains details about jQuery. This section contains details about jQuery. This section contains details about jQuery. This section contains details about jQuery. This section contains details about jQuery. This section contains details about jQuery. This section contains details about jQuery. This section contains details about jQuery.</p>
+        <script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+             $(document).ready(function()
+             {
+                $("#b1").click(function()
+                {
+                    $("p").toggleClass("c1");
+                    $("#b1").toggleClass("c4");
+                });
+                $("#b2").click(function()
+                {
+                    $("p").toggleClass("c2");
+                    $("#b2").toggleClass("c4");
+                });
+                $("#b3").click(function()
+                {
+                    $("p").toggleClass("c3");
+                    $("#b3").toggleClass("c4");
+                });
+            });
+        </script>
+    </body>
+</html>

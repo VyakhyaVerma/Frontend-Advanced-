@@ -1,0 +1,1 @@
+<script>alert("Hi, You have opened the ClientScripts1 file");</script>

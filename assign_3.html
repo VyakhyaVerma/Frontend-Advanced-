@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        <h1 align="center">Table Data</h1>
+        <hr/>
+        <table align="center"  id="t1" border="2" style="border:1px solid black ">
+            <tr id="ttt"></tr>
+        </table>
+        <script>
+            var a=["HTML5","CSS3","JQuery","AngularJS","Bootstrap"];
+            var obj=document.getElementById("ttt");
+            var  tableObj =  document.getElementById("t1");
+            for(var i=0;i<a.length;i++)
+            {
+                var  row1 =  tableObj.insertRow(-1);
+                var  cell1 =  row1.insertCell(-1);
+                var  cell2 =  row1.insertCell(-1);
+                cell1.innerHTML = i+1;
+                cell2.innerHTML = a[i];
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <style>
+            img
+            {
+                border-radius: 100%;
+                height:120;
+                width:120
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">Image Gallery</h1>
+        <hr/>
+        <br/><br/>
+        <table id="t1" align="center" border="0">
+            <tr>
+                <td><img src="i1.jpg"  class="c1"/></td>
+                <td><img src="i2.jpg"  class="c2"/></td>
+                <td><img src="i3.jpg"  class="c1"/></td>
+                <td><img src="i4.jpg"  class="c2"/></td>
+            </tr>
+            <tr>
+                <td><img src="i5.jpg"  class="c2"/></td>
+                <td><img src="i6.jpg"  class="c1"/></td>
+                <td><img src="i7.jpg"  class="c2"/></td>
+                <td><img src="i8.jpg"  class="c1"/></td>
+            </tr>
+            <tr>
+                <td><img src="i1.jpg"  class="c1"/></td>
+                <td><img src="i2.jpg"  class="c2"/></td>
+                <td><img src="i3.jpg"  class="c1"/></td>
+                <td><img src="i4.jpg"  class="c2"/></td>
+            </tr>
+            <tr>
+                <td><img src="i5.jpg"  class="c2"/></td>
+                <td><img src="i6.jpg"  class="c1"/></td>
+                <td><img src="i7.jpg"  class="c2"/></td>
+                <td><img src="i8.jpg"  class="c1"/></td>
+            </tr>
+        </table>
+        <script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                var c;
+                setInterval(function()
+                {
+                    $(".c1").toggle(2000);
+                    c=setTimeout(function()
+                    {
+                        $(".c2").toggle(2000);
+                    },2000)		
+                },2000);
+            });
+        </script>
+    </body>
+</html>

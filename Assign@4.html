@@ -1,0 +1,46 @@
+<html>
+    <head></head>
+    <body>
+        <h1 align="center">Working With Objects</h1>
+        <hr/>
+        <input type="button" value="Object 1" onclick="f1()">
+        <input type="button" value="Object 2" onclick="f2()">
+        <input type="button" value="Object 3" onclick="f3()">
+        <hr/>
+        <p id="p1"></p>
+        <hr/>
+        <script>
+            function f1()
+            {
+                var obj1={empno:1,ename:"John",job:"Manager",salary:100000,deptno:1024};
+                var str=document.getElementById("p1");
+                str.innerHTML="Employee NO-1:" + obj1.empno +", Employee Name:" + obj1.ename +", Job:" + obj1.job +", Salary:" + obj1.salary +", Department NO:" +obj1.deptno;
+            }
+            function f2()
+            {
+                var obj2={};
+                obj2.empno=1;
+                obj2.ename="John";
+                obj2.job="Manager";
+                obj2.salary=100000;
+                obj2.deptno=1024;
+                var str=document.getElementById("p1");
+                str.innerHTML="Employee NO-2:" + obj2.empno +", Employee Name:" + obj2.ename +", Job:" + obj2.job +", Salary:" + obj2.salary +", Department NO:" +obj2.deptno;
+            }
+            function Employeee()
+            {
+                this.empno=1;
+                this.ename="John";
+                this.job="Manager";
+                this.salary=100000;
+                this.deptno=1024;
+            }
+            function f3()
+            {
+                var obj3= new Employeee;
+                var str=document.getElementById("p1");
+                str.innerHTML="Employee NO-3:" + obj3.empno +", Employee Name:" + obj3.ename +", Job:" + obj3.job +", Salary:" + obj3.salary +", Department NO:" +obj3.deptno;
+            }
+        </script>
+    </body>
+</html>

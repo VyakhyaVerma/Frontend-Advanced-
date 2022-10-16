@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <style>
+            img
+            {
+                height:100;
+                width:100;
+                border-radius: 100%;
+            }
+            p
+            {
+                color: red;
+            }
+            #ddd1
+            {
+                float: left;
+                border: 2px solid black;
+                border-radius: 5px;
+                padding: 10px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">Showing Server Data</h1>
+        <hr/>
+        <input type="button" value="Get Users" id="b1"/>
+        <br/><br/>
+        <div id="d1"></div>
+        <script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                $("#b1").click(function()
+                {
+                    var a=[];
+                    var str="";
+                    var e="";
+                    var im;
+                    var d;
+                    $.ajax(
+                        {
+                            url : "https://reqres.in/api/users",
+                            type: "GET",
+                            success :  function(response)
+                            {
+                                //alert(response);
+                                show(response);
+							}		
+						});				 
+				});
+                function show(response)
+                {
+                    a=response.data;
+                    //console.log(a);
+                    for(let i in a)
+                    {
+                        let dib = document.createElement("div");
+                        dib.setAttribute("id","ddd1");
+                        $("#d1").append(dib);
+                        str=a[i].first_name+ " " +a[i].last_name;
+                        e=a[i].email;
+                        im='<img src="' + a[i].avatar +'"/>';
+                        d= im + "<br/>" + "<p>" + str + "</p>" + '<p style="color:blue">'+ e +"<p/>";
+                        $(dib).append(d);
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

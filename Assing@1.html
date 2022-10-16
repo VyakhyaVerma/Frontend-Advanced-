@@ -1,0 +1,39 @@
+<html>
+    <head></head>
+    <body>
+        <h1 align="center">Form Update</h1>
+        <hr/>
+        <form action="update.php" method="post" id="ss" onsubmit="sub()">
+            <span>Enter User ID : </span>
+            <input type="text" name="uid" id="id" autofocus onblur="err()">
+            <span id="s1"></span>
+            <br/><br/>
+            <span>Enter Password : </span>
+            <input type="password" name="pass" id="pwd">
+            <input type="submit" value="Login">
+        </form>
+        <script>
+            function sub()
+            {
+                var obj2=document.getElementById("id").value;
+                if(obj2==" " || obj2=="")
+                {
+                    event.preventDefault();
+                }
+            }
+            function err()
+            {
+                var obj1=document.getElementById("id").value;
+                if(obj1==" " || obj1=="")
+                {
+                    document.getElementById("s1").innerHTML="Enter Valid User ID";
+                    document.getElementById("id").focus();
+                }
+                else
+                {
+                    document.getElementById("s1").innerHTML="";
+                }
+            }
+        </script>
+    </body>
+</html>

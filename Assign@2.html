@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        <h1 align="center">Branch Gallery</h1>
+        <hr/>
+        <select id="ss1" onchange="image_new()">
+            <option>Hyderabad</option>
+            <option>Pune</option>
+            <option>Bangalore</option>
+            <option>Chennai</option>
+        </select>
+        <br/><br/>
+        <img src="Hyderabad.jpg" height="400" width="800" id="iim">
+        <script>
+            function image_new()
+            {
+                var obj1=document.getElementById("iim");
+                var obj2=document.getElementById("ss1");
+                obj1.src=obj2.value+".jpg";
+            }
+        </script>
+    </body>
+</html>

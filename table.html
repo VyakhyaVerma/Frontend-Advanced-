@@ -1,0 +1,31 @@
+<html>
+    <head></head>
+    <body>
+        <h1 align="center">Dynamic Operations on Array Using Js</h1>
+        <hr/>
+        <table align="center"  id="t1" border="2">
+            <tr id="ttt"></tr>
+        </table>
+        <script>
+            var a=["HTML5","CSS3","JQuery","AngularJS","Bootstrap","HTML5","CSS3","JQuery","AngularJS","Bootstrap","HTML5","CSS3","JQuery","AngularJS","Bootstrap","HTML5","CSS3","JQuery","AngularJS","Bootstrap","HTML5","Bootstrap"];
+            var obj=document.getElementById("ttt");
+            var  tableObj =  document.getElementById("t1");
+            var str="";
+            var x=0;
+            for(var j=0;j<6;j++)
+            {
+                str=str+"<tr><tr/>"                
+                for(var i=0;i<4;i++)
+                { 
+                    str=str+"<td>"+a[x]+"</td>";
+                    x++;
+                    if(x>a.length-1)
+                    {
+                        break;
+                    }
+                }
+            }
+            tableObj.innerHTML+=str;
+        </script>
+    </body>
+</html>

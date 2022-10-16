@@ -1,0 +1,38 @@
+<html>
+    <head></head>
+    <body>
+        <h1 align="center">DOM Manipulation</h1>
+        <hr/>
+        <label>Product Name</label>
+        <input type="text" id="t1" placeholder="Enter Prodect Name">
+        <br/><br/>
+        <label>Unit Price</label>
+        <input type="text" id="t2" placeholder="Enter Unit Price">
+        <br/><br/>
+        <label>Quantity</label>
+        <input type="text" id="t3" placeholder="Enter Quantity">
+        <br/><br/>
+        <input type="button" id="b1" value="Add Details"/>
+        <table id="tb1" align="center" border="2">
+            <tr>
+                <th>Product Name</th>
+                <th>Unit Price</th>
+                <th>Quantity</th>
+            </tr>
+        </table>
+        <script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                $("#b1").click(function()
+                {
+                    p = $("#t1").val();
+                    u = $("#t2").val();
+                    q = $("#t3").val();
+                    data = "<tr><td>"+p+"</td><td>"+u+"</td>"+"<td>"+q+"</td></tr>";
+                    $("#tb1").append(data);
+                });
+            });
+        </script>
+    </body>
+</html>
